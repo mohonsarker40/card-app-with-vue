@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>card vue </title>
+    <title>card app with vue </title>
     <!-- style css -->
     <link rel="stylesheet" href="./assets/styles.css">
     <!-- vue cdn -->
@@ -13,9 +13,15 @@
 <body>
     
     <div id="app">
-        <h1>Product is here</h1>
+        <h1>{{ product }}</h1>
     </div>
 
+    <!-- import app -->
     <script src="./main.js"></script>
+
+    <!-- mount app -->
+    <script>
+        const mountApp = app.mount('#app')
+    </script>
 </body>
 </html>

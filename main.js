@@ -1,5 +1,5 @@
-const app = Vue.app({
-    data:function () {
+const app = Vue.createApp({
+    data() {
         return {
             product: 'Sucks'
         }
