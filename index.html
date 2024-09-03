@@ -22,10 +22,22 @@
             </div>
             <div class="product-info">
               <h1>{{ product }}</h1>
-              <a :href="url"></a>
-              <p v-if="inStock">In stock</p>
-              <p v-else="outofStock">Out of stock</p>
-              
+              <p v-if="inventory > 10">In stock</p>
+              <p v-else-if="inventory <= 10 && inventory > 0">Almost sold out</p>
+              <p v-else>Out of stock</p>
+              <hr>
+              <h2 v-if="onSale">On Sale</h2>
+              <hr>
+              <h4>Fabricks</h4>
+              <ul>
+                <li v-for="detail in details">{{ detail }}</li>
+              </ul>
+              <hr>
+              <h4>Available colors</h4>
+              <div v-for="variant in variants" :key="variant.id">{{ variant.color }}</div>
+              <hr>
+              <h4>Available sizes</h4>
+              <div v-for="size in sizes">{{ size.fit }}</div>
             </div>
           </div>
         </div>
