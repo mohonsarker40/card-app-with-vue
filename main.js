@@ -8,8 +8,8 @@ const app = Vue.createApp({
             onSale: true,
             details: ['50% cotton, 30% wool, 20% polyester'],
             variants: [
-                {id: 442, color: 'Blue'},
-                {id: 443, color: 'Greeen'}
+                {id: 442, color: 'Blue', image: './assets/images/socks_blue.jpg'},
+                {id: 443, color: 'Greeen', image: './assets/images/socks_green.jpg'}
 
             ],
             sizes: [
@@ -23,6 +23,9 @@ const app = Vue.createApp({
     methods: {
         addToCard(){
             this.cart += 1;
+        },
+        updateImage(variantImage){
+            this.image = variantImage;
         }
     }
 }
